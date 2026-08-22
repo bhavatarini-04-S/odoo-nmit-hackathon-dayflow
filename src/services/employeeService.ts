@@ -1,6 +1,6 @@
 import { employees } from "../mock/mockData";
 import type { User } from "../types";
-import { mockApi } from "./mockApi";
+import { mockApi, newMockId } from "./mockApi";
 
 export async function getEmployees(): Promise<User[]> {
   return mockApi(() => employees);
@@ -33,4 +33,26 @@ export async function findEmployeeByEmail(
       ),
     250,
   );
+}
+export async function createEmployee(
+  data: Pick<User, "fullName" | "email" | "role">,
+): Promise<User> {
+  return mockApi(() => {
+    const number = String(employees.length + 1001).padStart(4, "0");
+    const user: User = {
+      id: newMockId("user"),
+      employeeId: `DF-${number}`,
+      fullName: data.fullName,
+      email: data.email,
+      role: data.role,
+      department: "Unassigned",
+      designation: "New hire",
+      phone: "",
+      address: "",
+      profileImage: "",
+      joiningDate: new Date().toISOString().slice(0, 10),
+    };
+    employees.push(user);
+    return user;
+  });
 }

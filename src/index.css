@@ -16,3 +16,11 @@
     font: inherit;
   }
 }
+@layer components {
+  .auth-input {
+    @apply w-full rounded-lg border bg-white px-3 py-2.5 text-sm transition outline-none focus:border-indigo-500 focus:ring-2 focus:ring-indigo-100 dark:bg-slate-950;
+  }
+  .auth-button {
+    @apply flex w-full items-center justify-center gap-2 rounded-lg bg-indigo-600 px-4 py-2.5 text-sm font-semibold text-white transition hover:bg-indigo-700 disabled:cursor-not-allowed disabled:opacity-70;
+  }
+}
