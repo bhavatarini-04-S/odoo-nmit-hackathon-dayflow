@@ -1,0 +1,52 @@
+[
+  {
+    "id": "l-001",
+    "employeeId": "DF-1007",
+    "leaveType": "Paid",
+    "startDate": "2026-08-14",
+    "endDate": "2026-08-17",
+    "remarks": "Family visit",
+    "status": "Approved",
+    "adminComment": "Approved. Enjoy your break!"
+  },
+  {
+    "id": "l-002",
+    "employeeId": "DF-1001",
+    "leaveType": "Sick",
+    "startDate": "2026-08-25",
+    "endDate": "2026-08-26",
+    "remarks": "Medical rest",
+    "status": "Pending",
+    "adminComment": null
+  },
+  {
+    "id": "l-003",
+    "employeeId": "DF-1004",
+    "leaveType": "Unpaid",
+    "startDate": "2026-08-10",
+    "endDate": "2026-08-12",
+    "remarks": "Personal commitments",
+    "status": "Rejected",
+    "adminComment": "Please use available paid leave first."
+  },
+  {
+    "id": "l-004",
+    "employeeId": "DF-1015",
+    "leaveType": "Paid",
+    "startDate": "2026-09-04",
+    "endDate": "2026-09-07",
+    "remarks": "Short trip",
+    "status": "Approved",
+    "adminComment": "Approved."
+  },
+  {
+    "id": "l-005",
+    "employeeId": "DF-1017",
+    "leaveType": "Sick",
+    "startDate": "2026-08-24",
+    "endDate": "2026-08-24",
+    "remarks": "Doctor appointment",
+    "status": "Pending",
+    "adminComment": null
+  }
+]

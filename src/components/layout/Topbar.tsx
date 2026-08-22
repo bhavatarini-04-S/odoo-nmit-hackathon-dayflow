@@ -1,7 +1,8 @@
-import { Bell, LogOut, Menu, Search } from "lucide-react";
+import { LogOut, Menu, Search } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../hooks/useAuth";
 import { useUiStore } from "../../store/uiStore";
+import { NotificationsDropdown } from "./NotificationsDropdown";
 export function Topbar() {
   const { currentUser, logout } = useAuth();
   const toggleMobileMenu = useUiStore((state) => state.toggleMobileMenu);
@@ -16,7 +17,7 @@ export function Topbar() {
     navigate("/login");
   };
   return (
-    <header className="flex h-16 items-center gap-3 border-b bg-white px-4 sm:px-6 dark:bg-slate-900">
+    <header className="relative flex h-16 items-center gap-4 border-b bg-white px-4 sm:px-6 dark:bg-slate-900 z-40">
       <button
         className="rounded-lg p-2 text-slate-600 hover:bg-slate-100 md:hidden"
         aria-label="Open navigation"
@@ -33,21 +34,15 @@ export function Topbar() {
           placeholder="Search people, requests..."
         />
       </label>
-      <div className="ml-auto flex items-center gap-2">
-        <button
-          aria-label="Notifications"
-          className="relative rounded-lg p-2 text-slate-600 hover:bg-slate-100 dark:text-slate-300 dark:hover:bg-slate-800"
-        >
-          <Bell className="size-5" />
-          <span className="absolute top-1 right-1 size-2 rounded-full bg-indigo-600" />
-        </button>
-        <div className="hidden text-right sm:block">
-          <p className="text-sm font-medium">{currentUser?.fullName}</p>
-          <p className="text-xs text-slate-500 capitalize">
+      <div className="ml-auto flex items-center gap-3">
+        <NotificationsDropdown />
+        <div className="hidden flex-col items-end sm:flex">
+          <p className="text-sm font-medium leading-tight">{currentUser?.fullName}</p>
+          <p className="text-xs text-slate-500 capitalize leading-tight">
             {currentUser?.role}
           </p>
         </div>
-        <div className="grid size-9 place-items-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700">
+        <div className="grid size-9 shrink-0 place-items-center rounded-full bg-indigo-100 text-sm font-semibold text-indigo-700">
           {initials}
         </div>
         <button
