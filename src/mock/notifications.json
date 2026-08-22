@@ -1,0 +1,38 @@
+[
+  {
+    "id": "n-001",
+    "userId": "u-001",
+    "title": "Leave request received",
+    "message": "Your sick leave request is waiting for approval.",
+    "type": "info",
+    "isRead": false,
+    "createdAt": "2026-08-22T08:30:00.000Z"
+  },
+  {
+    "id": "n-002",
+    "userId": "u-002",
+    "title": "New leave request",
+    "message": "Ananya Rao submitted a sick leave request.",
+    "type": "warning",
+    "isRead": false,
+    "createdAt": "2026-08-22T08:31:00.000Z"
+  },
+  {
+    "id": "n-003",
+    "userId": "u-003",
+    "title": "Payroll published",
+    "message": "Your August payslip is now available.",
+    "type": "success",
+    "isRead": true,
+    "createdAt": "2026-08-21T09:00:00.000Z"
+  },
+  {
+    "id": "n-004",
+    "userId": "u-004",
+    "title": "Attendance reminder",
+    "message": "Please regularize your recent attendance entries.",
+    "type": "alert",
+    "isRead": false,
+    "createdAt": "2026-08-21T10:00:00.000Z"
+  }
+]
