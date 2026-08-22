@@ -136,3 +136,7 @@ npm run lint
 ## License
 
 No license specified yet — consider adding one (e.g. MIT) if you plan to open this project up for contributions.
+
+## Deployment Link
+
+https://bhavatarini-04-s.github.io/odoo-nmit-hackathon-dayflow/
